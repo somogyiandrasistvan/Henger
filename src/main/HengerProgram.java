@@ -13,10 +13,14 @@ public class HengerProgram {
 
     public void run() {
         lista();
-
+        for (Henger h : lista()) {
+            System.out.println(h);
+            
+        }
         System.out.println("Hengerek száma: " + lista().size());
         System.out.println("Átlag térfogat: " + atlagTerfogat());
         System.out.println("Csövek sulya: " + csovekSulya());
+        System.out.println("Hengerek száma: " + lista().size());
 
     }
 
@@ -24,7 +28,6 @@ public class HengerProgram {
         double osszeg = 0;
 
         for (Henger h : lista()) {
-            System.out.println(h);
             osszeg += h.terfogat();
         }
         return osszeg / lista().size();
@@ -47,7 +50,9 @@ public class HengerProgram {
         });
         hengerek.add(new TomorHenger(1, 1) {
         });
-        hengerek.add(new CsoHenger(1, 1, 1) {
+        hengerek.add(new CsoHenger(1, 1, .5) {
+        });
+        hengerek.add(new CsoHenger(1, 1, .1) {
         });
 
         return hengerek;

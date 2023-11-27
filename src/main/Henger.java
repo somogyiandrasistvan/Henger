@@ -2,12 +2,13 @@ package main;
 
 public abstract class Henger {
 
-    private static int hengerDarab;
+    private static int hengerDarab = 0;
     private double sugar, magassag;
 
     public Henger(double sugar, double magassag) {
         this.sugar = sugar;
         this.magassag = magassag;
+        hengerDarab++;
     }
 
     public static int getHengerDarab() {
